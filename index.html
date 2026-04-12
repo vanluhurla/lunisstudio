@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LUNIS STUDIO — Brand & Digital Agency</title>
+  <title>LUNIS STUDIO — Refined Creative Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -27,8 +27,10 @@
     body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(250,248,245,0.95), rgba(250,248,245,0)); backdrop-filter: blur(8px); }
-    .nav-logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; }
-    .nav-logo span { color: var(--rose); }
+    .nav-logo { font-family: var(--font-display); letter-spacing: 0.12em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 0; }
+    .nav-logo-icon { height: 7.65rem; width: auto; display: block; object-fit: contain; flex-shrink: 0; }
+    .nav-logo-text { display: flex; flex-direction: column; justify-content: center; line-height: 0.92; gap: 0.06em; margin-left: -2.55rem; }
+    .nav-logo-line { display: block; font-size: 1.28rem; letter-spacing: 0.14em; }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); text-decoration: none; opacity: 0.55; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; }
@@ -38,9 +40,13 @@
     .hero-dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(44,40,37,0.07) 1px, transparent 1px); background-size: 28px 28px; }
     .hero-content { position: relative; text-align: center; max-width: 1000px; }
     .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rose); margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
-    .hero-title { font-family: var(--font-display); font-size: clamp(4.5rem, 13vw, 11rem); line-height: 0.9; letter-spacing: 0.02em; color: var(--ink); opacity: 0; animation: fadeUp 0.9s 0.4s forwards; }
-    .hero-title .line-accent { color: var(--rose); font-family: var(--font-serif); font-style: italic; font-size: 0.62em; display: block; }
-    .hero-sub { margin-top: 2.5rem; font-size: 1rem; line-height: 1.85; color: var(--ink-light); max-width: 500px; margin-left: auto; margin-right: auto; opacity: 0; animation: fadeUp 0.9s 0.6s forwards; }
+    .hero-title { font-family: var(--font-display); line-height: 1.12; letter-spacing: 0.02em; color: var(--ink); opacity: 0; animation: fadeUp 0.9s 0.4s forwards; }
+    .hero-title .hero-title-lead { display: block; font-family: inherit; color: inherit; font-size: clamp(1.85rem, 5.5vw, 3.35rem); letter-spacing: 0.18em; line-height: 1.15; margin-bottom: 0.55rem; }
+    @media (min-width: 520px) {
+      .hero-title .hero-title-lead { white-space: nowrap; }
+    }
+    .hero-title .line-accent { color: var(--rose); font-family: var(--font-serif); font-style: italic; font-size: clamp(1.35rem, 3.6vw, 2.35rem); display: block; line-height: 1.2; }
+    .hero-sub { margin-top: 2.5rem; font-size: 1rem; line-height: 1.85; color: var(--ink-light); max-width: 580px; margin-left: auto; margin-right: auto; opacity: 0; animation: fadeUp 0.9s 0.6s forwards; }
     .hero-cta { margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.8s forwards; }
     .btn { display: inline-block; padding: 0.85rem 2.2rem; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
     .btn-primary { background: var(--rose); color: #fff; }
@@ -72,9 +78,9 @@
 
     .services { background: var(--bg-alt); color: var(--ink); }
     .services .section-label { color: var(--rose); }
-    .services-header { max-width: 1200px; margin: 0 auto 5rem; display: flex; justify-content: space-between; align-items: flex-end; }
-    .services-header h2 { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5rem); line-height: 0.95; letter-spacing: 0.02em; color: var(--ink); }
-    .services-header p { max-width: 280px; color: var(--ink-light); font-size: 0.9rem; line-height: 1.75; }
+    .services-header { max-width: 1200px; margin: 0 auto 5rem; }
+    .services-header h2 { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5rem); line-height: 0.95; letter-spacing: 0.02em; color: var(--ink); margin-bottom: 1.5rem; }
+    .services-header p { color: var(--ink-light); font-size: 0.9rem; line-height: 1.85; max-width: 520px; }
     .services-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--warm-line); }
     .service-card { background: var(--bg-alt); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.35s, box-shadow 0.35s; }
     .service-card:hover { background: var(--bg); box-shadow: 0 8px 40px rgba(44,40,37,0.08); }
@@ -84,14 +90,11 @@
     .service-title { font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink); margin-bottom: 1rem; }
     .service-desc { font-size: 0.84rem; color: var(--ink-light); line-height: 1.85; }
 
-    .management-bar { max-width: 1200px; margin: 1px auto 0; background: var(--petal); padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; border-top: none; }
-    .management-bar h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); }
-    .management-bar p { font-size: 0.85rem; color: var(--ink-light); margin-top: 0.5rem; max-width: 500px; line-height: 1.8; }
-
     .process { background: var(--bg); }
     .process-inner { max-width: 1200px; margin: 0 auto; }
     .process-header { margin-bottom: 5rem; }
-    .process-header h2 { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 4.8rem); line-height: 0.95; color: var(--ink); }
+    .process-header h2 { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 4.8rem); line-height: 0.95; color: var(--ink); margin-bottom: 1.5rem; }
+    .process-header p { color: var(--ink-light); font-size: 0.9rem; line-height: 1.85; max-width: 520px; }
     .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
     .process-steps::before { content: ''; position: absolute; top: 2rem; left: calc(12.5% + 1px); right: calc(12.5% + 1px); height: 1px; background: linear-gradient(to right, var(--rose-light), rgba(181,115,106,0.15)); }
     .step { padding: 1rem 1.5rem 1rem 0; }
@@ -102,8 +105,10 @@
     .team { background: var(--bg-alt); border-top: 1px solid var(--warm-line); }
     .team-inner { max-width: 1200px; margin: 0 auto; }
     .team-header { margin-bottom: 4rem; }
-    .team-header h2 { font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.3rem); font-style: italic; color: var(--ink); }
-    .team-header p { color: var(--ink-light); margin-top: 1rem; max-width: 440px; line-height: 1.85; font-size: 0.9rem; }
+    .team-header h2 { font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.3rem); font-style: normal; line-height: 1.2; color: var(--ink); }
+    .team-header h2 em { font-style: italic; color: var(--sage); }
+    .team-header p { color: var(--ink-light); margin-top: 1rem; max-width: 520px; line-height: 1.85; font-size: 0.9rem; }
+    .team-header p + p { margin-top: 0.85rem; }
     .team-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .team-card { padding: 2.5rem; background: var(--bg); border: 1px solid var(--warm-line); position: relative; overflow: hidden; transition: box-shadow 0.3s; }
     .team-card:hover { box-shadow: 0 6px 30px rgba(44,40,37,0.07); }
@@ -117,7 +122,7 @@
     .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 70%); }
     .cta-section h2 { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.95; letter-spacing: 0.02em; margin-bottom: 1.5rem; position: relative; }
     .cta-section h2 em { font-family: var(--font-serif); font-style: italic; opacity: 0.75; font-size: 0.68em; display: block; }
-    .cta-section p { opacity: 0.8; max-width: 400px; margin: 0 auto 3rem; line-height: 1.85; position: relative; }
+    .cta-section p { opacity: 0.8; max-width: 520px; margin: 0 auto 3rem; line-height: 1.85; position: relative; }
     .btn-white { background: #fff; color: var(--rose); padding: 1rem 2.8rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; display: inline-block; font-family: var(--font-body); transition: all 0.25s; position: relative; }
     .btn-white:hover { background: var(--ink); color: #fff; transform: translateY(-2px); }
 
@@ -140,8 +145,8 @@
     .form-submit:hover { background: #a0625a; transform: translateY(-2px); }
 
     footer { background: var(--bg-dark); padding: 3rem; display: flex; justify-content: space-between; align-items: center; border-top: none; flex-wrap: wrap; gap: 1rem; }
-    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 0.15em; color: #f5f0e8; }
-    .footer-logo span { color: var(--rose-light); }
+    .footer-logo { font-family: var(--font-display); letter-spacing: 0.15em; color: #f5f0e8; display: flex; flex-direction: column; line-height: 0.92; gap: 0.06em; }
+    .footer-logo-line { display: block; font-size: 1.15rem; letter-spacing: 0.14em; }
     .footer-copy { font-size: 0.72rem; color: rgba(245,240,232,0.4); letter-spacing: 0.1em; }
     .footer-links { display: flex; gap: 2rem; }
     .footer-links a { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.45); text-decoration: none; transition: color 0.2s; }
@@ -162,7 +167,6 @@
       .nav-links { display: none; }
       section { padding: 5rem 1.5rem; }
       .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .services-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
       .services-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .process-steps::before { display: none; }
@@ -171,14 +175,19 @@
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
       .form-row { grid-template-columns: 1fr; }
-      .management-bar { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#" class="nav-logo">LUNIS<span>.</span>STUDIO</a>
+    <a href="#" class="nav-logo">
+      <img src="bulbimage.png" alt="" class="nav-logo-icon" width="144" height="144" />
+      <span class="nav-logo-text">
+        <span class="nav-logo-line">Lunis</span>
+        <span class="nav-logo-line">Studio</span>
+      </span>
+    </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
@@ -191,15 +200,15 @@
     <div class="hero-bg"></div>
     <div class="hero-dots"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Brand &amp; Digital Consulting Agency</p>
+      <p class="hero-eyebrow">Web, Visual &amp; Digital Presence</p>
       <h1 class="hero-title">
-        YOUR BRAND,
-        <span class="line-accent">reimagined.</span>
+        <span class="hero-title-lead">Simple websites, stronger visuals.</span>
+        <span class="line-accent">A more polished online presence.</span>
       </h1>
-      <p class="hero-sub">Fresh eyes. Sharp strategy. Real results. We help businesses transform their identity, online presence, and social media — from the ground up.</p>
+      <p class="hero-sub">We help brands refine how they appear online — from rebuilding poorly structured websites using existing platforms to creating simple new sites, social media design systems, and visual content support.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Start your rebrand</a>
-        <a href="#services" class="btn btn-outline">Explore services</a>
+        <a href="#contact" class="btn btn-primary">Book a free consultation</a>
+        <a href="#services" class="btn btn-outline">View services</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -210,22 +219,22 @@
 
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <span>Brand Identity</span><span class="dot">✦</span>
-      <span>Social Media</span><span class="dot">✦</span>
-      <span>Website Design</span><span class="dot">✦</span>
-      <span>Content Creation</span><span class="dot">✦</span>
-      <span>Photo Editing</span><span class="dot">✦</span>
-      <span>Video Production</span><span class="dot">✦</span>
-      <span>Social Templates</span><span class="dot">✦</span>
-      <span>Brand Strategy</span><span class="dot">✦</span>
-      <span>Brand Identity</span><span class="dot">✦</span>
-      <span>Social Media</span><span class="dot">✦</span>
-      <span>Website Design</span><span class="dot">✦</span>
-      <span>Content Creation</span><span class="dot">✦</span>
-      <span>Photo Editing</span><span class="dot">✦</span>
-      <span>Video Production</span><span class="dot">✦</span>
-      <span>Social Templates</span><span class="dot">✦</span>
-      <span>Brand Strategy</span><span class="dot">✦</span>
+      <span>Website Refresh &amp; Rebuilds</span><span class="dot">✦</span>
+      <span>Simple Website Creation</span><span class="dot">✦</span>
+      <span>Social Media Design</span><span class="dot">✦</span>
+      <span>Template Packs</span><span class="dot">✦</span>
+      <span>Photo &amp; Video Support</span><span class="dot">✦</span>
+      <span>Image Direction</span><span class="dot">✦</span>
+      <span>Website Maintenance</span><span class="dot">✦</span>
+      <span>Digital Presentation</span><span class="dot">✦</span>
+      <span>Website Refresh &amp; Rebuilds</span><span class="dot">✦</span>
+      <span>Simple Website Creation</span><span class="dot">✦</span>
+      <span>Social Media Design</span><span class="dot">✦</span>
+      <span>Template Packs</span><span class="dot">✦</span>
+      <span>Photo &amp; Video Support</span><span class="dot">✦</span>
+      <span>Image Direction</span><span class="dot">✦</span>
+      <span>Website Maintenance</span><span class="dot">✦</span>
+      <span>Digital Presentation</span><span class="dot">✦</span>
     </div>
   </div>
 
@@ -233,21 +242,21 @@
     <div class="about-inner">
       <div class="about-text reveal">
         <p class="section-label">About Lunis Studio</p>
-        <h2>We bring <em>fresh thinking</em> to every brief.</h2>
-        <p>Lunis Studio is a family-run creative agency that blends youthful digital instinct with business-savvy strategy. We understand what actually works online in today's fast-moving world — because we live it every day.</p>
-        <p>Whether you're a small business looking to establish a professional online presence, or an established brand needing a bold refresh, we build identities that people remember and strategies that deliver results.</p>
-        <a href="#contact" class="btn btn-primary" style="margin-top:1rem">Let's talk →</a>
+        <h2>Thoughtful digital presence, <em>designed with clarity.</em></h2>
+        <p>Lunis Studio is a family-run creative studio dedicated to shaping elegant, well-presented digital experiences.</p>
+        <p>We help brands refine their online presence through simple website creation, website refreshes and rebuilds, social media design support, visual template packs, and image-led content guidance. Our approach is thoughtful, practical, and design-conscious — with a focus on creating work that feels polished, cohesive, and easy to maintain.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1rem">Book a free consultation</a>
       </div>
       <div class="about-visual reveal reveal-delay-2">
         <div class="about-card">
-          <div class="stat">100%</div>
-          <div class="stat-label">Tailored to your business</div>
-          <p>No cookie-cutter packages. Every solution is built around your specific goals, audience, and industry.</p>
+          <div class="stat">Clear</div>
+          <div class="stat-label">Structure &amp; presentation</div>
+          <p>We prioritise clarity and ease of use — so your website and social channels feel intentional, not accidental.</p>
         </div>
         <div class="about-card">
-          <div class="stat">3×</div>
-          <div class="stat-label">Creative perspectives on every brief</div>
-          <p>A unique trio — two creatives native to the digital age, guided by real business experience.</p>
+          <div class="stat">Cohesive</div>
+          <div class="stat-label">Visuals in harmony</div>
+          <p>From layouts to imagery, we help your digital presence hold together — refined, consistent, and straightforward to upkeep.</p>
         </div>
       </div>
     </div>
@@ -255,86 +264,83 @@
 
   <section class="services" id="services">
     <div class="services-header reveal">
-      <div>
-        <p class="section-label">What we do</p>
-        <h2>OUR<br>SERVICES</h2>
-      </div>
-      <p>From a single asset to a complete brand overhaul — we scale to what you need, when you need it.</p>
+      <p class="section-label">Services</p>
+      <h2>CREATIVE SUPPORT FOR A<br>MORE REFINED DIGITAL PRESENCE.</h2>
+      <p>Our services are designed to help brands look more polished, organised, and visually consistent across their website and social platforms.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-num">01</div>
-        <div class="service-icon">🎯</div>
-        <h3 class="service-title">Brand Consulting</h3>
-        <p class="service-desc">Strategic brand audits, identity development, naming, tone of voice, and positioning. We help you define who you are and how to communicate it — consistently and confidently.</p>
+        <div class="service-icon">🌐</div>
+        <h3 class="service-title">Website Refresh &amp; Rebuilds</h3>
+        <p class="service-desc">We take websites that feel outdated, cluttered, or difficult to navigate and rebuild them using the platform or builder already in place, whenever possible. The result is a clearer structure, a stronger visual presentation, and a site that feels easier to use and maintain.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">02</div>
-        <div class="service-icon">📱</div>
-        <h3 class="service-title">Social Media Consulting</h3>
-        <p class="service-desc">Platform strategy, content planning, audience growth, and engagement tactics. We tell you exactly what to post, when to post it, and how to grow an audience that converts.</p>
+        <div class="service-icon">✨</div>
+        <h3 class="service-title">Simple Website Creation</h3>
+        <p class="service-desc">We create simple, elegant websites for brands that need a strong online presence without unnecessary complexity. Ideal for presentation-led websites such as restaurants, studios, service brands, and portfolio-style businesses.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">03</div>
-        <div class="service-icon">🎨</div>
-        <h3 class="service-title">Social Media Templates</h3>
-        <p class="service-desc">Custom, on-brand templates for Instagram, TikTok, LinkedIn, and more. Professional, editable, and designed to keep your feed looking consistent without the effort.</p>
+        <div class="service-icon">📐</div>
+        <h3 class="service-title">Social Media Design Support</h3>
+        <p class="service-desc">We help organise the visual side of your social media so your content feels more cohesive, intentional, and professionally presented. This can include layout direction, feed structure, visual planning, and design consistency.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">04</div>
-        <div class="service-icon">🌐</div>
-        <h3 class="service-title">Website Creation</h3>
-        <p class="service-desc">Clean, modern websites that look great and work hard. From landing pages to full multi-page sites — built to impress, designed to convert, and easy for you to manage.</p>
+        <div class="service-icon">📋</div>
+        <h3 class="service-title">Social Media Template Packs</h3>
+        <p class="service-desc">We design editable template packs and ready-to-use layouts for brands that want to post more consistently whilst keeping their visual identity polished and recognisable.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">05</div>
-        <div class="service-icon">📸</div>
-        <h3 class="service-title">Photo Editing</h3>
-        <p class="service-desc">Professional retouching, colour grading, and brand-consistent editing. Product photography, headshots or lifestyle content — we make your visuals impossible to scroll past.</p>
+        <div class="service-icon">🎬</div>
+        <h3 class="service-title">Photo &amp; Video Production Support</h3>
+        <p class="service-desc">We support visual content creation for digital use, helping shape photo and video output that feels natural, elevated, and aligned with the brand’s overall presentation.</p>
       </div>
       <div class="service-card reveal reveal-delay-3">
         <div class="service-num">06</div>
-        <div class="service-icon">🎬</div>
-        <h3 class="service-title">Video Creation</h3>
-        <p class="service-desc">Short-form content for Reels, TikTok and YouTube Shorts. From concept to final cut — we produce scroll-stopping video that tells your story and grows your reach.</p>
+        <div class="service-icon">🖼</div>
+        <h3 class="service-title">Image Direction &amp; Visual Consulting</h3>
+        <p class="service-desc">We offer practical visual guidance for photography, video, and branded content, helping brands create stronger imagery with more clarity, confidence, and consistency.</p>
       </div>
-    </div>
-    <div class="management-bar reveal">
-      <div>
-        <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.5rem;">Add-on Service</p>
-        <h3>Social Media &amp; Site Management</h3>
-        <p>Prefer a fully hands-off experience? We manage your accounts and websites end-to-end — scheduling posts, responding to comments, updating content, and keeping everything running smoothly.</p>
+      <div class="service-card reveal">
+        <div class="service-num">07</div>
+        <div class="service-icon">🔧</div>
+        <h3 class="service-title">Website Maintenance</h3>
+        <p class="service-desc">When needed, we continue supporting websites after launch with content updates, small edits, and ongoing maintenance to keep everything current and running smoothly.</p>
       </div>
-      <a href="#contact" class="btn btn-outline" style="white-space:nowrap;">Enquire now →</a>
     </div>
   </section>
 
   <section class="process" id="process">
     <div class="process-inner">
       <div class="process-header reveal">
-        <p class="section-label">How it works</p>
-        <h2>THE LUNIS<br>PROCESS</h2>
+        <p class="section-label">Process</p>
+        <h2>A CLEAR PROCESS, SHAPED AROUND WHAT YOUR BRAND ACTUALLY NEEDS.</h2>
+        <p>Our approach is thoughtful and straightforward — focused on improving what matters most and delivering work that feels clean, intentional, and well considered.</p>
       </div>
       <div class="process-steps">
         <div class="step reveal">
           <div class="step-num">01</div>
           <h3 class="step-title">Discovery</h3>
-          <p class="step-desc">We start with a conversation about your business, goals, audience, and what isn't working. No brief is too big or small.</p>
+          <p class="step-desc">We begin by understanding your brand, what already exists, and what feels unclear, outdated, or visually inconsistent.</p>
         </div>
         <div class="step reveal reveal-delay-1">
           <div class="step-num">02</div>
-          <h3 class="step-title">Strategy</h3>
-          <p class="step-desc">We map out a clear plan — what needs to change, what to create, and how we'll measure success. Full visibility at every step.</p>
+          <h3 class="step-title">Plan</h3>
+          <p class="step-desc">We define what needs to be improved, rebuilt, created, or organised, and choose the clearest path forward.</p>
         </div>
         <div class="step reveal reveal-delay-2">
           <div class="step-num">03</div>
-          <h3 class="step-title">Creation</h3>
-          <p class="step-desc">Our team gets to work — designing, writing, building, and editing until everything is sharp, on-brand, and ready to make an impact.</p>
+          <h3 class="step-title">Create</h3>
+          <p class="step-desc">We design, refine, and build the work with care, focusing on clarity, presentation, and a polished final result.</p>
         </div>
         <div class="step reveal reveal-delay-3">
           <div class="step-num">04</div>
-          <h3 class="step-title">Launch &amp; Grow</h3>
-          <p class="step-desc">We deliver your assets, launch your presence, and offer ongoing management so the momentum never stops.</p>
+          <h3 class="step-title">Launch &amp; Support</h3>
+          <p class="step-desc">Once everything is ready, we deliver the final work and, if needed, continue with ongoing support and maintenance.</p>
         </div>
       </div>
     </div>
@@ -344,49 +350,50 @@
     <div class="team-inner">
       <div class="team-header reveal">
         <p class="section-label">The team</p>
-        <h2>Three minds,<br>one vision.</h2>
-        <p>We're a family-run creative agency — which means you get genuine care, clear communication, and a team that truly invests in your success.</p>
+        <h2>A family-run studio with a <em>thoughtful</em> creative approach.</h2>
+        <p>Lunis Studio brings together creativity, visual direction, and practical digital support to help brands present themselves with clarity and confidence online.</p>
+        <p>We combine design sensitivity, visual organisation, and a practical approach to digital presentation — creating work that feels both refined and functional.</p>
       </div>
       <div class="team-cards">
         <div class="team-card reveal">
           <div class="team-avatar">★</div>
           <h3 class="team-name">The Creative Director</h3>
-          <p class="team-role">Social Strategy &amp; Content</p>
-          <p class="team-bio">Fluent in every social platform and format — from TikTok trends to Instagram grids. Brings a sharp eye for what catches attention and keeps audiences hooked.</p>
+          <p class="team-role">Digital Presence &amp; Content</p>
+          <p class="team-bio">Shapes how your brand shows up online — from social layouts to content rhythm — with a calm, contemporary eye for what reads clearly and looks beautifully composed.</p>
         </div>
         <div class="team-card reveal reveal-delay-1">
           <div class="team-avatar">◈</div>
           <h3 class="team-name">The Design Lead</h3>
-          <p class="team-role">Visual Design &amp; Video</p>
-          <p class="team-bio">Handles the visual side — photo editing, video creation, templates and web design. Makes your brand look as good as it sounds.</p>
+          <p class="team-role">Visual Design &amp; Moving Image</p>
+          <p class="team-bio">Leads the visual craft — websites, templates, photography support, and video — so every asset feels considered, cohesive, and true to your presentation.</p>
         </div>
         <div class="team-card reveal reveal-delay-2">
           <div class="team-avatar">◆</div>
           <h3 class="team-name">The Director</h3>
-          <p class="team-role">Strategy &amp; Client Relations</p>
-          <p class="team-bio">The business backbone of Lunis Studio — bringing real-world experience, client management expertise, and strategic thinking to every project.</p>
+          <p class="team-role">Client Relations &amp; Project Direction</p>
+          <p class="team-bio">Keeps projects steady and well communicated — translating what you need into a clear plan, thoughtful timelines, and delivery you can rely on.</p>
         </div>
       </div>
     </div>
   </section>
 
   <div class="cta-section reveal">
-    <h2>READY TO <em>create?</em></h2>
-    <p>Whether you need a quick refresh or a complete reinvention — let's build something you're proud of.</p>
-    <a href="#contact" class="btn-white">Get a free consultation</a>
+    <h2>READY TO REFINE YOUR <em>online presence?</em></h2>
+    <p>Whether you need a clearer website, stronger visuals for social media, or ongoing creative support, we’d love to help you create something polished, thoughtful, and beautifully presented.</p>
+    <a href="#contact" class="btn-white">Book a free consultation</a>
   </div>
 
   <section class="contact" id="contact">
     <div class="contact-inner">
       <div class="contact-info reveal">
-        <p class="section-label">Get in touch</p>
-        <h2>LET'S BUILD YOUR BRAND.</h2>
-        <p>Tell us about your business and what you're looking for. We'll come back to you within 48 hours with ideas, questions, and a no-obligation chat about how we can help.</p>
+        <p class="section-label">Contact</p>
+        <h2>LET'S TALK ABOUT WHAT YOUR BRAND NEEDS.</h2>
+        <p>Whether you’re looking to improve an existing website, create a simple new one, organise your social media visuals, or get support with image and content direction, we’d love to hear from you. We aim to reply within 48 hours.</p>
         <div class="contact-detail">
           <div class="contact-detail-icon">✉</div>
           <div class="contact-detail-text">
             <strong>Email</strong>
-            hello@lunis.studio
+            <a href="mailto:lumisstudioteam@gmail.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(107,101,96,0.35);">lumisstudioteam@gmail.com</a>
           </div>
         </div>
         <div class="contact-detail">
@@ -404,52 +411,56 @@
           </div>
         </div>
       </div>
-      <div class="contact-form reveal reveal-delay-2">
+      <form class="contact-form reveal reveal-delay-2" action="https://formsubmit.co/lumisstudioteam@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry — Lunis Studio website" />
+        <input type="hidden" name="_template" value="table" />
         <div class="form-row">
           <div class="form-group">
-            <label>First name</label>
-            <input type="text" placeholder="Jane" />
+            <label for="enquiry-firstname">First name</label>
+            <input id="enquiry-firstname" name="first_name" type="text" placeholder="Jane" required autocomplete="given-name" />
           </div>
           <div class="form-group">
-            <label>Last name</label>
-            <input type="text" placeholder="Smith" />
+            <label for="enquiry-lastname">Last name</label>
+            <input id="enquiry-lastname" name="last_name" type="text" placeholder="Smith" required autocomplete="family-name" />
           </div>
         </div>
         <div class="form-group">
-          <label>Email address</label>
-          <input type="email" placeholder="jane@yourbusiness.com" />
+          <label for="enquiry-email">Email address</label>
+          <input id="enquiry-email" name="email" type="email" placeholder="jane@yourbusiness.com" required autocomplete="email" />
         </div>
         <div class="form-group">
-          <label>Business name</label>
-          <input type="text" placeholder="Your Business Ltd." />
+          <label for="enquiry-business">Business name</label>
+          <input id="enquiry-business" name="business_name" type="text" placeholder="Your Business Ltd." autocomplete="organization" />
         </div>
         <div class="form-group">
-          <label>What do you need?</label>
-          <select>
+          <label for="enquiry-service">What do you need?</label>
+          <select id="enquiry-service" name="service" required>
             <option value="" disabled selected>Select a service…</option>
-            <option>Brand Consulting</option>
-            <option>Social Media Consulting</option>
-            <option>Social Media Templates</option>
-            <option>Website Creation</option>
-            <option>Photo Editing</option>
-            <option>Video Creation</option>
-            <option>Social Media / Site Management</option>
-            <option>Full Rebrand Package</option>
-            <option>Not sure — I need advice</option>
+            <option value="Website Refresh &amp; Rebuilds">Website Refresh &amp; Rebuilds</option>
+            <option value="Simple Website Creation">Simple Website Creation</option>
+            <option value="Social Media Design Support">Social Media Design Support</option>
+            <option value="Social Media Template Packs">Social Media Template Packs</option>
+            <option value="Photo &amp; Video Production Support">Photo &amp; Video Production Support</option>
+            <option value="Image Direction &amp; Visual Consulting">Image Direction &amp; Visual Consulting</option>
+            <option value="Website Maintenance">Website Maintenance</option>
+            <option value="Not sure — I’d like some guidance">Not sure — I’d like some guidance</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Tell us a bit more</label>
-          <textarea rows="4" placeholder="What's your current situation? What are you hoping to achieve? Any details help…"></textarea>
+          <label for="enquiry-message">Tell us a bit more</label>
+          <textarea id="enquiry-message" name="message" rows="4" placeholder="A few lines on what you’d like to refine or create are plenty to begin with…" required></textarea>
         </div>
-        <button class="form-submit" id="submitBtn">Send Enquiry →</button>
-      </div>
+        <button class="form-submit" type="submit">Send Enquiry →</button>
+      </form>
     </div>
   </section>
 
   <footer>
-    <div class="footer-logo">LUNIS<span>.</span>STUDIO</div>
-    <p class="footer-copy">© 2025 Lunis Studio. All rights reserved.</p>
+    <div class="footer-logo">
+      <span class="footer-logo-line">Lunis</span>
+      <span class="footer-logo-line">Studio</span>
+    </div>
+    <p class="footer-copy">© 2026 Lunis Studio. All rights reserved.</p>
     <div class="footer-links">
       <a href="#services">Services</a>
       <a href="#process">Process</a>
@@ -464,12 +475,6 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
-
-    document.getElementById('submitBtn').addEventListener('click', function () {
-      this.textContent = 'Message Sent ✓';
-      this.style.background = '#2a7a4a';
-      setTimeout(() => { this.textContent = 'Send Enquiry →'; this.style.background = ''; }, 3000);
-    });
   </script>
 </body>
 </html>
