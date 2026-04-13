@@ -145,12 +145,19 @@
     .form-submit:hover { background: #a0625a; transform: translateY(-2px); }
     .form-note { margin-top: 0.75rem; font-size: 0.78rem; color: var(--ink-light); line-height: 1.7; }
 
-    footer { background: var(--bg-dark); padding: 3rem; display: flex; justify-content: space-between; align-items: center; border-top: none; flex-wrap: wrap; gap: 1rem; }
-    .footer-logo { font-family: var(--font-display); letter-spacing: 0.15em; color: #f5f0e8; display: flex; flex-direction: column; line-height: 0.92; gap: 0.06em; }
+    footer { background: var(--bg-dark); padding: 3rem; border-top: none; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; }
+    .footer-left { justify-self: start; }
+    .footer-brand-row { display: flex; align-items: center; justify-content: flex-start; gap: 1.25rem; flex-wrap: wrap; }
+    .footer-logo { font-family: var(--font-display); letter-spacing: 0.15em; color: #f5f0e8; display: flex; flex-direction: column; line-height: 0.92; gap: 0.06em; text-align: left; }
     .footer-logo-line { display: block; font-size: 1.15rem; letter-spacing: 0.14em; }
     .footer-dot { color: var(--rose); }
-    .footer-copy { font-size: 0.72rem; color: rgba(245,240,232,0.4); letter-spacing: 0.1em; }
-    .footer-links { display: flex; gap: 2rem; }
+    .footer-social { display: flex; align-items: center; gap: 0.75rem; }
+    .footer-social a { display: flex; align-items: center; justify-content: center; opacity: 0.85; transition: opacity 0.2s; }
+    .footer-social a:hover { opacity: 1; }
+    .footer-social img { width: 26px; height: 26px; object-fit: contain; display: block; filter: brightness(0) invert(1); }
+    .footer-copy { font-size: 0.72rem; color: rgba(245,240,232,0.4); letter-spacing: 0.1em; margin: 0; max-width: 22rem; text-align: center; justify-self: center; }
+    .footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; justify-content: flex-end; justify-self: end; align-items: center; }
     .footer-links a { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.45); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: #f5f0e8; }
 
@@ -176,9 +183,13 @@
       .process-steps::before { display: none; }
       .team-cards { grid-template-columns: 1fr; }
       .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-      footer { flex-direction: column; text-align: center; }
-      .footer-links { justify-content: center; }
       .form-row { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 1.75rem; }
+      .footer-left { justify-self: center; }
+      .footer-brand-row { flex-direction: column; justify-content: center; gap: 0.9rem; }
+      .footer-logo { text-align: center; }
+      .footer-copy { justify-self: center; }
+      .footer-links { justify-self: center; justify-content: center; }
     }
   </style>
 </head>
@@ -452,16 +463,26 @@
   </section>
 
   <footer>
-    <div class="footer-logo">
-      <span class="footer-logo-line">LUNIS<span class="footer-dot">.</span></span>
-      <span class="footer-logo-line">STUDIO</span>
-    </div>
-    <p class="footer-copy">© 2026 LUNIS.STUDIO. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand-row">
+          <div class="footer-logo">
+            <span class="footer-logo-line">LUNIS<span class="footer-dot">.</span></span>
+            <span class="footer-logo-line">STUDIO</span>
+          </div>
+          <div class="footer-social">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LUNIS.STUDIO on Facebook"><img src="facebook.png" alt="" width="32" height="32" /></a>
+            <a href="https://www.instagram.com/lunisstudio.uk/" target="_blank" rel="noopener noreferrer" aria-label="LUNIS.STUDIO on Instagram"><img src="instagram.png" alt="" width="32" height="32" /></a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 LUNIS.STUDIO. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </footer>
 
