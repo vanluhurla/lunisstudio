@@ -114,7 +114,6 @@
     .team-card { padding: 2.5rem; background: var(--bg); border: 1px solid var(--warm-line); position: relative; overflow: hidden; transition: box-shadow 0.3s; }
     .team-card:hover { box-shadow: 0 6px 30px rgba(44,40,37,0.07); }
     .team-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--rose-light), var(--petal)); }
-    .team-avatar { width: 68px; height: 68px; border-radius: 50%; background: linear-gradient(135deg, var(--petal), var(--rose-light)); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.5rem; border: 1px solid rgba(181,115,106,0.2); }
     .team-name { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.3rem; color: var(--ink); }
     .team-role { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-bottom: 1.2rem; }
     .team-bio { font-size: 0.84rem; color: var(--ink-light); line-height: 1.85; }
@@ -133,6 +132,7 @@
     .contact-info p { color: var(--ink-light); line-height: 1.9; font-size: 0.9rem; margin-bottom: 2.5rem; }
     .contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; }
     .contact-detail-icon { width: 36px; height: 36px; min-width: 36px; border: 1px solid var(--warm-line); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; background: var(--bg-alt); }
+    .contact-detail-icon img { width: 18px; height: 18px; object-fit: contain; display: block; }
     .contact-detail-text { font-size: 0.85rem; color: var(--ink-light); }
     .contact-detail-text strong { display: block; color: var(--ink); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.2rem; }
     .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
@@ -366,19 +366,16 @@
       </div>
       <div class="team-cards">
         <div class="team-card reveal">
-          <div class="team-avatar">★</div>
           <h3 class="team-name">The Creative Director</h3>
           <p class="team-role">Digital Presence &amp; Content</p>
           <p class="team-bio">Shapes how your brand shows up online — from social layouts to content rhythm — with a calm, contemporary eye for what reads clearly and looks beautifully composed.</p>
         </div>
         <div class="team-card reveal reveal-delay-1">
-          <div class="team-avatar">◈</div>
           <h3 class="team-name">The Design Lead</h3>
           <p class="team-role">Visual Design &amp; Moving Image</p>
           <p class="team-bio">Leads the visual craft — websites, templates, photography support, and video — so every asset feels considered, cohesive, and true to your presentation.</p>
         </div>
         <div class="team-card reveal reveal-delay-2">
-          <div class="team-avatar">◆</div>
           <h3 class="team-name">The Director</h3>
           <p class="team-role">Client Relations &amp; Project Direction</p>
           <p class="team-bio">Keeps projects steady and well communicated — translating what you need into a clear plan, thoughtful timelines, and delivery you can rely on.</p>
@@ -400,21 +397,21 @@
         <h2>LET'S TALK ABOUT WHAT YOUR BRAND NEEDS.</h2>
         <p>Whether you’re looking to improve an existing website, create a simple new one, organise your social media visuals, or get support with image and content direction, we’d love to hear from you. We aim to reply within 48 hours. Initial consultations are free, and all project quotes are tailored to the scope of work.</p>
         <div class="contact-detail">
-          <div class="contact-detail-icon">✉</div>
+          <div class="contact-detail-icon"><img src="mail.png" alt="" /></div>
           <div class="contact-detail-text">
             <strong>Email</strong>
             <a href="mailto:contact@lunisstudio.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(107,101,96,0.35);">contact@lunisstudio.com</a>
           </div>
         </div>
         <div class="contact-detail">
-          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-icon"><img src="map-pin-check-inside.png" alt="" /></div>
           <div class="contact-detail-text">
             <strong>Based in</strong>
             United Kingdom — working with clients nationwide
           </div>
         </div>
         <div class="contact-detail">
-          <div class="contact-detail-icon">⏱</div>
+          <div class="contact-detail-icon"><img src="clock-3.png" alt="" /></div>
           <div class="contact-detail-text">
             <strong>Response time</strong>
             We reply within 48 hours, usually much sooner.
@@ -474,7 +471,7 @@
             <span class="footer-logo-line">STUDIO</span>
           </div>
           <div class="footer-social">
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LUNIS.STUDIO on Facebook"><img src="facebook.png" alt="" width="32" height="32" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61570732284898" target="_blank" rel="noopener noreferrer" aria-label="LUNIS.STUDIO on Facebook"><img src="facebook.png" alt="" width="32" height="32" /></a>
             <a href="https://www.instagram.com/lunisstudio.uk/" target="_blank" rel="noopener noreferrer" aria-label="LUNIS.STUDIO on Instagram"><img src="instagram.png" alt="" width="32" height="32" /></a>
           </div>
         </div>
