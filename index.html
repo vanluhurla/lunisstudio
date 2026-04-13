@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LUNIS STUDIO — Refined Creative Studio</title>
+  <title>LUNIS.STUDIO</title>
+  <link rel="icon" type="image/png" href="Lightbulb.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -29,32 +30,32 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(250,248,245,0.95), rgba(250,248,245,0)); backdrop-filter: blur(8px); }
     .nav-logo { text-decoration: none; display: inline-flex; align-items: center; }
     .nav-logo-img { height: 2.85rem; width: auto; max-width: min(220px, 52vw); display: block; object-fit: contain; object-position: left center; }
+    .nav-toggle { display: none; border: 1px solid var(--warm-line); background: rgba(250,248,245,0.9); width: 2.5rem; height: 2.5rem; padding: 0; align-items: center; justify-content: center; flex-direction: column; gap: 0.24rem; border-radius: 0.35rem; }
+    .nav-toggle span { width: 1rem; height: 1px; background: var(--ink); display: block; }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); text-decoration: none; opacity: 0.55; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; }
 
-    .hero { min-height: 100vh; display: grid; place-items: center; position: relative; overflow: hidden; padding: 8rem 3rem 4rem; background: var(--bg); }
+    .hero { min-height: 100vh; display: grid; place-items: center; position: relative; overflow: hidden; padding: 7rem 3rem 4.5rem; background: var(--bg); }
     .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 55% 55% at 75% 45%, rgba(181,115,106,0.1) 0%, transparent 65%), radial-gradient(ellipse 40% 50% at 15% 75%, rgba(122,145,136,0.08) 0%, transparent 55%); }
     .hero-dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(44,40,37,0.07) 1px, transparent 1px); background-size: 28px 28px; }
     .hero-content { position: relative; text-align: center; max-width: 1000px; }
-    .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rose); margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+    .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rose); margin-bottom: 2.35rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
     .hero-title { font-family: var(--font-display); line-height: 1.12; letter-spacing: 0.02em; color: var(--ink); opacity: 0; animation: fadeUp 0.9s 0.4s forwards; }
-    .hero-title .hero-title-lead { display: block; font-family: inherit; color: inherit; font-size: clamp(1.85rem, 5.5vw, 3.35rem); letter-spacing: 0.18em; line-height: 1.15; margin-bottom: 0.55rem; }
+    .hero-title .hero-title-lead { display: block; font-family: var(--font-display); color: var(--ink); font-size: clamp(3rem, 6vw, 5rem); letter-spacing: 0.02em; line-height: 0.95; margin-bottom: 0.55rem; }
     @media (min-width: 520px) {
       .hero-title .hero-title-lead { white-space: nowrap; }
     }
-    .hero-title .line-accent { color: var(--rose); font-family: var(--font-serif); font-style: italic; font-size: clamp(1.35rem, 3.6vw, 2.35rem); display: block; line-height: 1.2; }
-    .hero-sub { margin-top: 2.5rem; font-size: 1rem; line-height: 1.85; color: var(--ink-light); max-width: 580px; margin-left: auto; margin-right: auto; opacity: 0; animation: fadeUp 0.9s 0.6s forwards; }
-    .hero-cta { margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.8s forwards; }
-    .hero-cta-note { margin-top: 1rem; font-size: 0.78rem; color: var(--ink-light); line-height: 1.7; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero-title .line-accent { color: var(--rose); font-family: var(--font-serif); font-style: italic; font-size: clamp(1.8rem, 4.5vw, 3.2rem); display: block; line-height: 1.2; }
+    .hero-sub { margin-top: 2.9rem; font-size: 1rem; line-height: 1.85; color: var(--ink-light); max-width: 580px; margin-left: auto; margin-right: auto; opacity: 0; animation: fadeUp 0.9s 0.6s forwards; }
+    .hero-cta { margin-top: 3.35rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.8s forwards; }
+    .hero-cta-note { margin-top: 1.25rem; font-size: 0.78rem; color: var(--ink-light); line-height: 1.7; max-width: 620px; margin-left: auto; margin-right: auto; opacity: 0; animation: fadeUp 0.9s 1s forwards; }
+
     .btn { display: inline-block; padding: 0.85rem 2.2rem; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
     .btn-primary { background: var(--rose); color: #fff; }
     .btn-primary:hover { background: #a0625a; transform: translateY(-2px); }
     .btn-outline { border: 1px solid rgba(44,40,37,0.2); color: var(--ink); }
     .btn-outline:hover { border-color: var(--ink); transform: translateY(-2px); }
-    .hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0; animation: fadeUp 1s 1.2s forwards; }
-    .hero-scroll span { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-light); }
-    .scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, var(--rose), transparent); animation: scrollPulse 2s ease-in-out infinite; }
 
     .marquee-wrap { overflow: hidden; border-top: 1px solid var(--warm-line); border-bottom: 1px solid var(--warm-line); padding: 1.1rem 0; background: var(--petal); }
     .marquee-track { display: flex; gap: 3rem; animation: marquee 22s linear infinite; white-space: nowrap; }
@@ -95,7 +96,7 @@
     .process-header h2 { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 4.8rem); line-height: 0.95; color: var(--ink); margin-bottom: 1.5rem; }
     .process-header p { color: var(--ink-light); font-size: 0.9rem; line-height: 1.85; max-width: 520px; }
     .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
-    .process-steps::before { content: ''; position: absolute; top: 2rem; left: calc(12.5% + 1px); right: calc(12.5% + 1px); height: 1px; background: linear-gradient(to right, var(--rose-light), rgba(181,115,106,0.15)); }
+    .process-steps::before { content: ''; position: absolute; top: 3rem; left: 2rem; right: calc(25% - 2rem); height: 1px; background: linear-gradient(to right, var(--rose-light), rgba(181,115,106,0.15)); }
     .step { padding: 1rem 1.5rem 1rem 0; }
     .step-num { width: 4rem; height: 4rem; border-radius: 50%; background: var(--rose); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.3rem; color: #fff; margin-bottom: 2rem; position: relative; z-index: 1; }
     .step-title { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--ink); }
@@ -147,6 +148,7 @@
     footer { background: var(--bg-dark); padding: 3rem; display: flex; justify-content: space-between; align-items: center; border-top: none; flex-wrap: wrap; gap: 1rem; }
     .footer-logo { font-family: var(--font-display); letter-spacing: 0.15em; color: #f5f0e8; display: flex; flex-direction: column; line-height: 0.92; gap: 0.06em; }
     .footer-logo-line { display: block; font-size: 1.15rem; letter-spacing: 0.14em; }
+    .footer-dot { color: var(--rose); }
     .footer-copy { font-size: 0.72rem; color: rgba(245,240,232,0.4); letter-spacing: 0.1em; }
     .footer-links { display: flex; gap: 2rem; }
     .footer-links a { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.45); text-decoration: none; transition: color 0.2s; }
@@ -154,7 +156,6 @@
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    @keyframes scrollPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
 
     .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.85s ease, transform 0.85s ease; }
     .reveal.visible { opacity: 1; transform: none; }
@@ -164,7 +165,10 @@
 
     @media (max-width: 900px) {
       nav { padding: 1.2rem 1.5rem; }
-      .nav-links { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .nav-links { display: none; position: absolute; top: calc(100% - 0.2rem); left: 1.5rem; right: 1.5rem; background: rgba(250,248,245,0.96); border: 1px solid var(--warm-line); padding: 1rem 1.2rem; flex-direction: column; gap: 0.9rem; backdrop-filter: blur(8px); }
+      .nav-links.open { display: flex; }
+      .nav-links a { opacity: 0.9; }
       section { padding: 5rem 1.5rem; }
       .about-inner { grid-template-columns: 1fr; gap: 3rem; }
       .services-grid { grid-template-columns: 1fr; }
@@ -182,9 +186,14 @@
 
   <nav>
     <a href="#home" class="nav-logo">
-      <img src="lunis.png" alt="Lunis Studio" class="nav-logo-img" width="220" height="60" />
+      <img src="lunis.png" alt="LUNIS.STUDIO" class="nav-logo-img" width="220" height="60" />
     </a>
-    <ul class="nav-links">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="primaryNav">
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#team">Team</a></li>
@@ -207,10 +216,6 @@
         <a href="#services" class="btn btn-outline">View services</a>
       </div>
       <p class="hero-cta-note">Free initial consultation. Project quotes are tailored to scope, with fair and considered pricing.</p>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
@@ -238,9 +243,9 @@
   <section class="about" id="about">
     <div class="about-inner">
       <div class="about-text reveal">
-        <p class="section-label">About Lunis Studio</p>
+        <p class="section-label">About LUNIS.STUDIO</p>
         <h2>Thoughtful digital presence, <em>designed with clarity.</em></h2>
-        <p>Lunis Studio is a family-run creative studio dedicated to shaping elegant, well-presented digital experiences.</p>
+        <p>LUNIS.STUDIO is a family-run creative studio dedicated to shaping elegant, well-presented digital experiences.</p>
         <p>We help brands refine their online presence through simple website creation, website refreshes and rebuilds, social media design support, visual template packs, and image-led content guidance. Our approach is thoughtful, practical, and design-conscious — with a focus on creating work that feels polished, cohesive, and easy to maintain.</p>
         <a href="#contact" class="btn btn-primary" style="margin-top:1rem">Book a free consultation</a>
       </div>
@@ -275,8 +280,8 @@
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">02</div>
         <div class="service-icon">✨</div>
-        <h3 class="service-title">Simple Website Creation</h3>
-        <p class="service-desc">We create simple, elegant websites for brands that need a strong online presence without unnecessary complexity. Ideal for presentation-led websites such as restaurants, studios, service brands, and portfolio-style businesses.</p>
+        <h3 class="service-title">Simple Website Creation &amp; Maintenance</h3>
+        <p class="service-desc">We create simple, elegant websites for brands that need a strong online presence without unnecessary complexity, then continue with thoughtful maintenance when needed — including content updates, small edits, and practical ongoing support.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">03</div>
@@ -301,12 +306,6 @@
         <div class="service-icon">🖼</div>
         <h3 class="service-title">Image Direction &amp; Visual Consulting</h3>
         <p class="service-desc">We offer practical visual guidance for photography, video, and branded content, helping brands create stronger imagery with more clarity, confidence, and consistency.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-num">07</div>
-        <div class="service-icon">🔧</div>
-        <h3 class="service-title">Website Maintenance</h3>
-        <p class="service-desc">When needed, we continue supporting websites after launch with content updates, small edits, and ongoing maintenance to keep everything current and running smoothly.</p>
       </div>
     </div>
   </section>
@@ -348,7 +347,7 @@
       <div class="team-header reveal">
         <p class="section-label">The team</p>
         <h2>A family-run studio with a <em>thoughtful</em> creative approach.</h2>
-        <p>Lunis Studio brings together creativity, visual direction, and practical digital support to help brands present themselves with clarity and confidence online.</p>
+        <p>LUNIS.STUDIO brings together creativity, visual direction, and practical digital support to help brands present themselves with clarity and confidence online.</p>
         <p>We combine design sensitivity, visual organisation, and a practical approach to digital presentation — creating work that feels both refined and functional.</p>
       </div>
       <div class="team-cards">
@@ -409,7 +408,7 @@
         </div>
       </div>
       <form class="contact-form reveal reveal-delay-2" action="https://formsubmit.co/contact@lunisstudio.com" method="POST">
-        <input type="hidden" name="_subject" value="New enquiry — Lunis Studio website" />
+        <input type="hidden" name="_subject" value="New enquiry — LUNIS.STUDIO website" />
         <input type="hidden" name="_template" value="table" />
         <div class="form-row">
           <div class="form-group">
@@ -434,12 +433,11 @@
           <select id="enquiry-service" name="service" required>
             <option value="" disabled selected>Select a service…</option>
             <option value="Website Refresh &amp; Rebuilds">Website Refresh &amp; Rebuilds</option>
-            <option value="Simple Website Creation">Simple Website Creation</option>
+            <option value="Simple Website Creation &amp; Maintenance">Simple Website Creation &amp; Maintenance</option>
             <option value="Social Media Design Support">Social Media Design Support</option>
             <option value="Social Media Template Packs">Social Media Template Packs</option>
             <option value="Photo &amp; Video Production Support">Photo &amp; Video Production Support</option>
             <option value="Image Direction &amp; Visual Consulting">Image Direction &amp; Visual Consulting</option>
-            <option value="Website Maintenance">Website Maintenance</option>
             <option value="Not sure — I’d like some guidance">Not sure — I’d like some guidance</option>
           </select>
         </div>
@@ -455,10 +453,10 @@
 
   <footer>
     <div class="footer-logo">
-      <span class="footer-logo-line">Lunis</span>
-      <span class="footer-logo-line">Studio</span>
+      <span class="footer-logo-line">LUNIS<span class="footer-dot">.</span></span>
+      <span class="footer-logo-line">STUDIO</span>
     </div>
-    <p class="footer-copy">© 2026 Lunis Studio. All rights reserved.</p>
+    <p class="footer-copy">© 2026 LUNIS.STUDIO. All rights reserved.</p>
     <div class="footer-links">
       <a href="#services">Services</a>
       <a href="#process">Process</a>
@@ -473,6 +471,31 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
+
+    const nav = document.querySelector('nav');
+    const navToggle = document.getElementById('navToggle');
+    const primaryNav = document.getElementById('primaryNav');
+
+    if (nav && navToggle && primaryNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = primaryNav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      primaryNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          primaryNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      document.addEventListener('click', e => {
+        if (!nav.contains(e.target)) {
+          primaryNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
   </script>
 </body>
 </html>
