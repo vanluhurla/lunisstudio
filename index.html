@@ -86,6 +86,7 @@
     .service-card:hover { background: var(--bg); box-shadow: 0 8px 40px rgba(44,40,37,0.08); }
     .service-num { font-family: var(--font-display); font-size: 0.85rem; color: var(--rose-light); letter-spacing: 0.15em; margin-bottom: 1.5rem; }
     .service-icon { width: 50px; height: 50px; border: 1px solid var(--warm-line); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.4rem; transition: border-color 0.3s, background 0.3s; background: var(--bg); }
+    .service-icon img { max-width: 26px; max-height: 26px; width: auto; height: auto; object-fit: contain; display: block; }
     .service-card:hover .service-icon { background: var(--petal); border-color: rgba(181,115,106,0.2); }
     .service-title { font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink); margin-bottom: 1rem; }
     .service-desc { font-size: 0.84rem; color: var(--ink-light); line-height: 1.85; }
@@ -196,7 +197,7 @@
 <body>
 
   <nav>
-    <a href="#home" class="nav-logo">
+    <a href="index.html#home" class="nav-logo">
       <img src="lunis.png" alt="LUNIS.STUDIO" class="nav-logo-img" width="220" height="60" />
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
@@ -205,9 +206,11 @@
       <span></span>
     </button>
     <ul class="nav-links" id="primaryNav">
+      <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#team">Team</a></li>
+      <li><a href="clients.html">Clients</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -284,37 +287,37 @@
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-num">01</div>
-        <div class="service-icon">🌐</div>
+        <div class="service-icon"><img src="git-compare-arrows.png" alt="" /></div>
         <h3 class="service-title">Website Refresh &amp; Rebuilds</h3>
         <p class="service-desc">We take websites that feel outdated, cluttered, or difficult to navigate and rebuild them using the platform or builder already in place, whenever possible. The result is a clearer structure, a stronger visual presentation, and a site that feels easier to use and maintain.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">02</div>
-        <div class="service-icon">✨</div>
+        <div class="service-icon"><img src="globe.png" alt="" /></div>
         <h3 class="service-title">Simple Website Creation &amp; Maintenance</h3>
         <p class="service-desc">We create simple, elegant websites for brands that need a strong online presence without unnecessary complexity, then continue with thoughtful maintenance when needed — including content updates, small edits, and practical ongoing support.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">03</div>
-        <div class="service-icon">📐</div>
+        <div class="service-icon"><img src="smartphone.png" alt="" /></div>
         <h3 class="service-title">Social Media Design Support</h3>
         <p class="service-desc">We help organise the visual side of your social media so your content feels more cohesive, intentional, and professionally presented. This can include layout direction, feed structure, visual planning, and design consistency.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">04</div>
-        <div class="service-icon">📋</div>
+        <div class="service-icon"><img src="layers-3.png" alt="" /></div>
         <h3 class="service-title">Social Media Template Packs</h3>
         <p class="service-desc">We design editable template packs and ready-to-use layouts for brands that want to post more consistently whilst keeping their visual identity polished and recognisable.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">05</div>
-        <div class="service-icon">🎬</div>
+        <div class="service-icon"><img src="camera.png" alt="" /></div>
         <h3 class="service-title">Photo &amp; Video Production Support</h3>
         <p class="service-desc">We support visual content creation for digital use, helping shape photo and video output that feels natural, elevated, and aligned with the brand’s overall presentation.</p>
       </div>
       <div class="service-card reveal reveal-delay-3">
         <div class="service-num">06</div>
-        <div class="service-icon">🖼</div>
+        <div class="service-icon"><img src="image.png" alt="" /></div>
         <h3 class="service-title">Image Direction &amp; Visual Consulting</h3>
         <p class="service-desc">We offer practical visual guidance for photography, video, and branded content, helping brands create stronger imagery with more clarity, confidence, and consistency.</p>
       </div>
@@ -478,9 +481,11 @@
       </div>
       <p class="footer-copy">© 2026 LUNIS.STUDIO. All rights reserved.</p>
       <div class="footer-links">
+        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#team">Team</a>
+        <a href="clients.html">Clients</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
