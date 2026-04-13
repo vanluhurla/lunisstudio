@@ -27,10 +27,8 @@
     body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(250,248,245,0.95), rgba(250,248,245,0)); backdrop-filter: blur(8px); }
-    .nav-logo { font-family: var(--font-display); letter-spacing: 0.12em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 0; }
-    .nav-logo-icon { height: 7.65rem; width: auto; display: block; object-fit: contain; flex-shrink: 0; }
-    .nav-logo-text { display: flex; flex-direction: column; justify-content: center; line-height: 0.92; gap: 0.06em; margin-left: -2.55rem; }
-    .nav-logo-line { display: block; font-size: 1.28rem; letter-spacing: 0.14em; }
+    .nav-logo { text-decoration: none; display: inline-flex; align-items: center; }
+    .nav-logo-img { height: 2.85rem; width: auto; max-width: min(220px, 52vw); display: block; object-fit: contain; object-position: left center; }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); text-decoration: none; opacity: 0.55; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; }
@@ -48,6 +46,7 @@
     .hero-title .line-accent { color: var(--rose); font-family: var(--font-serif); font-style: italic; font-size: clamp(1.35rem, 3.6vw, 2.35rem); display: block; line-height: 1.2; }
     .hero-sub { margin-top: 2.5rem; font-size: 1rem; line-height: 1.85; color: var(--ink-light); max-width: 580px; margin-left: auto; margin-right: auto; opacity: 0; animation: fadeUp 0.9s 0.6s forwards; }
     .hero-cta { margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.8s forwards; }
+    .hero-cta-note { margin-top: 1rem; font-size: 0.78rem; color: var(--ink-light); line-height: 1.7; max-width: 620px; margin-left: auto; margin-right: auto; }
     .btn { display: inline-block; padding: 0.85rem 2.2rem; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
     .btn-primary { background: var(--rose); color: #fff; }
     .btn-primary:hover { background: #a0625a; transform: translateY(-2px); }
@@ -143,6 +142,7 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-submit { background: var(--rose); color: #fff; border: none; padding: 1rem 2rem; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.25s, transform 0.2s; margin-top: 0.5rem; align-self: flex-start; }
     .form-submit:hover { background: #a0625a; transform: translateY(-2px); }
+    .form-note { margin-top: 0.75rem; font-size: 0.78rem; color: var(--ink-light); line-height: 1.7; }
 
     footer { background: var(--bg-dark); padding: 3rem; display: flex; justify-content: space-between; align-items: center; border-top: none; flex-wrap: wrap; gap: 1rem; }
     .footer-logo { font-family: var(--font-display); letter-spacing: 0.15em; color: #f5f0e8; display: flex; flex-direction: column; line-height: 0.92; gap: 0.06em; }
@@ -181,12 +181,8 @@
 <body>
 
   <nav>
-    <a href="#" class="nav-logo">
-      <img src="bulbimage.png" alt="" class="nav-logo-icon" width="144" height="144" />
-      <span class="nav-logo-text">
-        <span class="nav-logo-line">Lunis</span>
-        <span class="nav-logo-line">Studio</span>
-      </span>
+    <a href="#home" class="nav-logo">
+      <img src="lunis.png" alt="Lunis Studio" class="nav-logo-img" width="220" height="60" />
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
@@ -210,6 +206,7 @@
         <a href="#contact" class="btn btn-primary">Book a free consultation</a>
         <a href="#services" class="btn btn-outline">View services</a>
       </div>
+      <p class="hero-cta-note">Free initial consultation. Project quotes are tailored to scope, with fair and considered pricing.</p>
     </div>
     <div class="hero-scroll">
       <span>Scroll</span>
@@ -388,7 +385,7 @@
       <div class="contact-info reveal">
         <p class="section-label">Contact</p>
         <h2>LET'S TALK ABOUT WHAT YOUR BRAND NEEDS.</h2>
-        <p>Whether you’re looking to improve an existing website, create a simple new one, organise your social media visuals, or get support with image and content direction, we’d love to hear from you. We aim to reply within 48 hours.</p>
+        <p>Whether you’re looking to improve an existing website, create a simple new one, organise your social media visuals, or get support with image and content direction, we’d love to hear from you. We aim to reply within 48 hours. Initial consultations are free, and all project quotes are tailored to the scope of work.</p>
         <div class="contact-detail">
           <div class="contact-detail-icon">✉</div>
           <div class="contact-detail-text">
@@ -451,6 +448,7 @@
           <textarea id="enquiry-message" name="message" rows="4" placeholder="A few lines on what you’d like to refine or create are plenty to begin with…" required></textarea>
         </div>
         <button class="form-submit" type="submit">Send Enquiry →</button>
+        <p class="form-note">Free consultation. Tailored project quotes provided after initial review.</p>
       </form>
     </div>
   </section>
