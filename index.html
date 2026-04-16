@@ -141,8 +141,10 @@
 
     .contact { background: var(--bg); }
     .contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+    .contact-info { display: flex; flex-direction: column; height: 100%; }
     .contact-info h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 0.95; margin-bottom: 2rem; color: var(--ink); }
     .contact-info p { color: var(--ink-light); line-height: 1.9; font-size: 0.9rem; margin-bottom: 2.5rem; }
+    .contact-details { margin-top: auto; padding-top: 0.6rem; }
     .contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; }
     .contact-detail-icon { width: 36px; height: 36px; min-width: 36px; border: 1px solid var(--warm-line); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; background: var(--bg-alt); }
     .contact-detail-icon img { width: 18px; height: 18px; object-fit: contain; display: block; }
@@ -157,7 +159,7 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-submit { background: var(--rose); color: #fff; border: none; padding: 1rem 2rem; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.25s, transform 0.2s; margin-top: 0.5rem; align-self: flex-start; }
     .form-submit:hover { background: #a0625a; transform: translateY(-2px); }
-    .form-note { margin-top: 0.75rem; font-size: 0.78rem; color: var(--ink-light); line-height: 1.7; }
+    .form-note { margin-top: -0.55rem; font-size: 0.78rem; color: var(--ink-light); line-height: 1.7; }
 
     footer { background: var(--bg-dark); padding: 3rem; border-top: none; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; }
@@ -201,7 +203,7 @@
       .footer-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 1.75rem; }
       .footer-left { justify-self: center; }
       .footer-brand-row { flex-direction: column; justify-content: center; gap: 0.9rem; }
-      .footer-logo { text-align: center; }
+      .footer-logo { text-align: left; align-items: flex-start; }
       .footer-copy { justify-self: center; }
       .footer-links { justify-self: center; justify-content: center; }
     }
@@ -237,7 +239,7 @@
         <span class="hero-title-lead">Simple websites, stronger visuals.</span>
         <span class="line-accent">A more polished online presence.</span>
       </h1>
-      <p class="hero-sub">We help brands refine how they appear online — from rebuilding poorly structured websites using existing platforms to creating simple new sites, social media design systems, and visual content support.</p>
+      <p class="hero-sub">We help individuals and businesses rebuild, refine, and grow their online presence. Whether you need a new website, a website redesign, a stronger personal brand, or a complete social media and content strategy, we create the tools and visuals that elevate your digital identity.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Book a free consultation</a>
         <a href="#services" class="btn btn-outline">View services</a>
@@ -272,20 +274,21 @@
       <div class="about-text reveal">
         <p class="section-label">About LUNIS.STUDIO</p>
         <h2>Thoughtful digital presence, <em>designed with clarity.</em></h2>
-        <p>LUNIS.STUDIO is a family-run creative studio dedicated to shaping elegant, well-presented digital experiences.</p>
-        <p>We help brands refine their online presence through simple website creation, website refreshes and rebuilds, social media design support, visual template packs, and image-led content guidance. Our approach is thoughtful, practical, and design-conscious — with a focus on creating work that feels polished, cohesive, and easy to maintain.</p>
+        <p>LUNIS.STUDIO is a family-run creative studio specialising in web design, personal branding, and digital content creation.</p>
+        <p>We help individuals and businesses build and refine their online presence by shaping elegant, well-presented digital experiences.</p>
+        <p>Our approach is thoughtful, and practical, with a focus on creating polished, cohesive websites and online identities that are not only visually refined and understandable but also easy to manage and maintain.</p>
         <a href="#contact" class="btn btn-primary" style="margin-top:1rem">Book a free consultation</a>
       </div>
       <div class="about-visual reveal reveal-delay-2">
         <div class="about-card">
           <div class="stat">Clear</div>
           <div class="stat-label">Structure &amp; presentation</div>
-          <p>We prioritise clarity and ease of use — so your website and social channels feel intentional, not accidental.</p>
+          <p>We prioritise clarity and ease of use, so your website and social media channels feel intentional, and purposeful.</p>
         </div>
         <div class="about-card">
           <div class="stat">Cohesive</div>
           <div class="stat-label">Visuals in harmony</div>
-          <p>From layouts to imagery, we help your digital presence hold together — refined, consistent, and straightforward to upkeep.</p>
+          <p>From layouts to images, we help your digital presence stand out with professional web designs, consistent branding, and high-quality visual content.</p>
         </div>
       </div>
     </div>
@@ -294,45 +297,45 @@
   <section class="services" id="services">
     <div class="services-header reveal">
       <p class="section-label">Services</p>
-      <h2>CREATIVE SUPPORT FOR A<br>MORE REFINED DIGITAL PRESENCE.</h2>
-      <p>Our services are designed to help brands look more polished, organised, and visually consistent across their website and social platforms.</p>
+      <h2>CREATIVE SUPPORT FOR YOUR DIGITAL PRESENCE</h2>
+      <p>Our services are designed to help brands look more organised and visually consistent across their website and social platforms.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-num">01</div>
         <div class="service-icon"><img src="git-compare-arrows.png" alt="" /></div>
         <h3 class="service-title">Website Refresh &amp; Rebuilds</h3>
-        <p class="service-desc">We take websites that feel outdated, cluttered, or difficult to navigate and rebuild them using the platform or builder already in place, whenever possible. The result is a clearer structure, a stronger visual presentation, and a site that feels easier to use and maintain.</p>
+        <p class="service-desc">We take websites that feel outdated, cluttered, or difficult to navigate and transform them using the platform or builder already in place, whenever possible. The result is a clearer structure, improved user experience, a stronger visual presentation, and a site that feels easier to use and maintain.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">02</div>
         <div class="service-icon"><img src="globe.png" alt="" /></div>
         <h3 class="service-title">Simple Website Creation &amp; Maintenance</h3>
-        <p class="service-desc">We create simple, elegant websites for brands that need a strong online presence without unnecessary complexity, then continue with thoughtful maintenance when needed — including content updates, small edits, and practical ongoing support.</p>
+        <p class="service-desc">We create simple, elegant websites for businesses that want a strong online presence without unnecessary complexity. When needed, we also provide ongoing website maintenance and support, including content updates, small edits, and regular site improvements, keeping everything running smoothly.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">03</div>
         <div class="service-icon"><img src="smartphone.png" alt="" /></div>
-        <h3 class="service-title">Social Media Design Support</h3>
-        <p class="service-desc">We help organise the visual side of your social media so your content feels more cohesive, intentional, and professionally presented. This can include layout direction, feed structure, visual planning, and design consistency.</p>
+        <h3 class="service-title">Social Media Layout Support</h3>
+        <p class="service-desc">We help organise the visual side of your social media according to your needs, so your content feels more intentional, and professionally presented. This includes social media strategy, content planning, feed layout, visual direction, and brand consistency.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">04</div>
         <div class="service-icon"><img src="layers-3.png" alt="" /></div>
         <h3 class="service-title">Social Media Template Packs</h3>
-        <p class="service-desc">We design editable template packs and ready-to-use layouts for brands that want to post more consistently whilst keeping their visual identity polished and recognisable.</p>
+        <p class="service-desc">We design customisable social media template packs and content layouts for businesses that want to post more consistently whilst keeping their visual brand polished and recognisable.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">05</div>
         <div class="service-icon"><img src="camera.png" alt="" /></div>
         <h3 class="service-title">Photo &amp; Video Production Support</h3>
-        <p class="service-desc">We support visual content creation for digital use, helping shape photo and video output that feels natural, elevated, and aligned with the brand’s overall presentation.</p>
+        <p class="service-desc">We provide content creation support for photos and videos, helping businesses produce high-quality brand visuals for websites and social media that feel cohesive, natural, and professionally aligned with your brand.</p>
       </div>
       <div class="service-card reveal reveal-delay-3">
         <div class="service-num">06</div>
         <div class="service-icon"><img src="image.png" alt="" /></div>
-        <h3 class="service-title">Image Direction &amp; Visual Consulting</h3>
-        <p class="service-desc">We offer practical visual guidance for photography, video, and branded content, helping brands create stronger imagery with more clarity, confidence, and consistency.</p>
+        <h3 class="service-title">Visual Direction &amp; Consultation</h3>
+        <p class="service-desc">We provide visual direction and content strategy for the brand’s image and social media content, helping businesses produce consistent, high-quality imagery that strengthens their online presence.</p>
       </div>
     </div>
   </section>
@@ -341,24 +344,24 @@
     <div class="process-inner">
       <div class="process-header reveal">
         <p class="section-label">Process</p>
-        <h2>A CLEAR PROCESS, SHAPED AROUND WHAT YOUR BRAND ACTUALLY NEEDS.</h2>
-        <p>Our approach is thoughtful and straightforward — focused on improving what matters most and delivering work that feels clean, intentional, and well considered.</p>
+        <h2>A CLEAR PROCESS, SHAPED AROUND WHAT YOUR BRAND’S NEEDS</h2>
+        <p>Our approach is thoughtful and straightforward, focusing on improving what matters most for you and delivering work that feels clean, intentional, and well considered.</p>
       </div>
       <div class="process-steps">
         <div class="step reveal">
           <div class="step-num">01</div>
           <h3 class="step-title">Discovery</h3>
-          <p class="step-desc">We begin by understanding your brand, what already exists, and what feels unclear, outdated, or visually inconsistent.</p>
+          <p class="step-desc">We start with a brand and website review to understand your goal, assessing your existing visual identity, and online presence to identify what already exists, and what feels unclear, outdated, or visually inconsistent.</p>
         </div>
         <div class="step reveal reveal-delay-1">
           <div class="step-num">02</div>
           <h3 class="step-title">Plan</h3>
-          <p class="step-desc">We define what needs to be improved, rebuilt, created, or organised, and choose the clearest path forward.</p>
+          <p class="step-desc">We define what needs to be improved, rebuilt, created, or organised, and map out the clearest strategy and next steps based on your needs.</p>
         </div>
         <div class="step reveal reveal-delay-2">
           <div class="step-num">03</div>
           <h3 class="step-title">Create</h3>
-          <p class="step-desc">We design, refine, and build the work with care, focusing on clarity, presentation, and a polished final result.</p>
+          <p class="step-desc">We design, refine, and build your brand, website, and digital content with care and consideration, focusing on clarity, user experience, and a final result you’re satisfied with.</p>
         </div>
         <div class="step reveal reveal-delay-3">
           <div class="step-num">04</div>
@@ -372,26 +375,25 @@
   <section class="team" id="team">
     <div class="team-inner">
       <div class="team-header reveal">
-        <p class="section-label">The team</p>
+        <p class="section-label">Our team</p>
         <h2>A family-run studio with a <em>thoughtful</em> creative approach.</h2>
-        <p>LUNIS.STUDIO brings together creativity, visual direction, and practical digital support to help brands present themselves with clarity and confidence online.</p>
-        <p>We combine design sensitivity, visual organisation, and a practical approach to digital presentation — creating work that feels both refined and functional.</p>
+        <p>LUNIS.STUDIO combines design sensitivity, visual organisation, and a practical approach to digital presentation. We bring these qualities together to help brands present themselves with clarity and confidence online, creating websites, branding, and digital content that feel both refined and functional.</p>
       </div>
       <div class="team-cards">
         <div class="team-card reveal">
-          <h3 class="team-name">The Creative Director</h3>
-          <p class="team-role">Digital Presence &amp; Content</p>
-          <p class="team-bio">Shapes how your brand shows up online — from social layouts to content rhythm — with a calm, contemporary eye for what reads clearly and looks beautifully composed.</p>
+          <h3 class="team-name">Web Content Manager</h3>
+          <p class="team-role">Website Creation and Management</p>
+          <p class="team-bio">Leads the website development and online presence, producing and managing websites, with support for photography and video content, ensuring every asset feels considered, cohesive, and aligned with your brand presentation.</p>
         </div>
         <div class="team-card reveal reveal-delay-1">
-          <h3 class="team-name">The Design Lead</h3>
-          <p class="team-role">Visual Design &amp; Moving Image</p>
-          <p class="team-bio">Leads the visual craft — websites, templates, photography support, and video — so every asset feels considered, cohesive, and true to your presentation.</p>
+          <h3 class="team-name">Client &amp; Social Media Manager</h3>
+          <p class="team-role">Digital Presence &amp; Content</p>
+          <p class="team-bio">Shapes how your brand shows up online, from social media layouts to content strategy and posting rhythm, with a contemporary eye for clarity, composition, and clear visual identity.</p>
         </div>
         <div class="team-card reveal reveal-delay-2">
-          <h3 class="team-name">The Director</h3>
-          <p class="team-role">Client Relations &amp; Project Direction</p>
-          <p class="team-bio">Keeps projects steady and well communicated — translating what you need into a clear plan, thoughtful timelines, and delivery you can rely on.</p>
+          <h3 class="team-name">Strategy and Visual Director</h3>
+          <p class="team-role">Image Consultation &amp; Project Direction</p>
+          <p class="team-bio">Keeps projects organised and clearly communicated, translating your needs into structured plans, thoughtful timelines, and reliable delivery, while also overseeing photography and videography direction and production.</p>
         </div>
       </div>
     </div>
@@ -407,27 +409,29 @@
     <div class="contact-inner">
       <div class="contact-info reveal">
         <p class="section-label">Contact</p>
-        <h2>LET'S TALK ABOUT WHAT YOUR BRAND NEEDS.</h2>
-        <p>Whether you’re looking to improve an existing website, create a simple new one, organise your social media visuals, or get support with image and content direction, we’d love to hear from you. We aim to reply within 48 hours. Initial consultations are free, and all project quotes are tailored to the scope of work.</p>
-        <div class="contact-detail">
-          <div class="contact-detail-icon"><img src="mail.png" alt="" /></div>
-          <div class="contact-detail-text">
-            <strong>Email</strong>
-            <a href="mailto:contact@lunisstudio.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(107,101,96,0.35);">contact@lunisstudio.com</a>
+        <h2>LET’S FIND THE BEST DIRECTION FOR YOUR BRAND</h2>
+        <p>Whether you’re looking to improve an existing website, create a simple new one, organise your social media visuals, or get support with image and content direction, we’d love to hear from you. We aim to reply within 48 hours. Initial consultations are free, and all project quotes are tailored to the scope of work, with considerate pricing.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><img src="mail.png" alt="" /></div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <a href="mailto:contact@lunisstudio.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(107,101,96,0.35);">contact@lunisstudio.com</a>
+            </div>
           </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon"><img src="map-pin-check-inside.png" alt="" /></div>
-          <div class="contact-detail-text">
-            <strong>Based in</strong>
-            United Kingdom — working with clients nationwide
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><img src="map-pin-check-inside.png" alt="" /></div>
+            <div class="contact-detail-text">
+              <strong>Based in</strong>
+              United Kingdom. Working with clients nationwide.
+            </div>
           </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon"><img src="clock-3.png" alt="" /></div>
-          <div class="contact-detail-text">
-            <strong>Response time</strong>
-            We reply within 48 hours, usually much sooner.
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><img src="clock-3.png" alt="" /></div>
+            <div class="contact-detail-text">
+              <strong>Response time</strong>
+              We reply within 48 hours, usually much sooner.
+            </div>
           </div>
         </div>
       </div>
@@ -449,6 +453,10 @@
           <input id="enquiry-email" name="email" type="email" placeholder="jane@yourbusiness.com" required autocomplete="email" />
         </div>
         <div class="form-group">
+          <label for="enquiry-phone">Phone</label>
+          <input id="enquiry-phone" name="phone" type="tel" placeholder="+44 7123 456789" autocomplete="tel" />
+        </div>
+        <div class="form-group">
           <label for="enquiry-business">Business name</label>
           <input id="enquiry-business" name="business_name" type="text" placeholder="Your Business Ltd." autocomplete="organization" />
         </div>
@@ -458,16 +466,16 @@
             <option value="" disabled selected>Select a service…</option>
             <option value="Website Refresh &amp; Rebuilds">Website Refresh &amp; Rebuilds</option>
             <option value="Simple Website Creation &amp; Maintenance">Simple Website Creation &amp; Maintenance</option>
-            <option value="Social Media Design Support">Social Media Design Support</option>
+            <option value="Social Media Layout Support">Social Media Layout Support</option>
             <option value="Social Media Template Packs">Social Media Template Packs</option>
             <option value="Photo &amp; Video Production Support">Photo &amp; Video Production Support</option>
-            <option value="Image Direction &amp; Visual Consulting">Image Direction &amp; Visual Consulting</option>
+            <option value="Visual Direction &amp; Consultation">Visual Direction &amp; Consultation</option>
             <option value="Not sure — I’d like some guidance">Not sure — I’d like some guidance</option>
           </select>
         </div>
         <div class="form-group">
           <label for="enquiry-message">Tell us a bit more</label>
-          <textarea id="enquiry-message" name="message" rows="4" placeholder="A few lines on what you’d like to refine or create are plenty to begin with…" required></textarea>
+          <textarea id="enquiry-message" name="message" rows="4" placeholder="A few lines on your initial ideas are plenty to begin with" required></textarea>
         </div>
         <button class="form-submit" type="submit">Send Enquiry →</button>
         <p class="form-note">Free consultation. Tailored project quotes provided after initial review.</p>
