@@ -127,6 +127,7 @@
     .team-card { padding: 2.5rem; background: var(--bg); border: 1px solid var(--warm-line); position: relative; overflow: hidden; transition: box-shadow 0.3s; }
     .team-card:hover { box-shadow: 0 6px 30px rgba(44,40,37,0.07); }
     .team-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--rose-light), var(--petal)); }
+    .team-photo { width: calc(100% + 5rem); height: auto; max-height: none; object-fit: contain; object-position: center top; border: 0; margin: -2.5rem -2.5rem 0.9rem; display: block; background: var(--bg-alt); }
     .team-name { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.3rem; color: var(--ink); }
     .team-role { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-bottom: 1.2rem; }
     .team-bio { font-size: 0.84rem; color: var(--ink-light); line-height: 1.85; }
@@ -381,19 +382,23 @@
       </div>
       <div class="team-cards">
         <div class="team-card reveal">
-          <h3 class="team-name">Web Content Manager</h3>
+          <img src="helena.jpg" alt="Helena Hurla" class="team-photo" width="480" height="600" />
+          <h3 class="team-name">Helena Hurla | Web Content Manager</h3>
           <p class="team-role">Website Creation and Management</p>
           <p class="team-bio">Leads the website development and online presence, producing and managing websites, with support for photography and video content, ensuring every asset feels considered, cohesive, and aligned with your brand presentation.</p>
         </div>
         <div class="team-card reveal reveal-delay-1">
-          <h3 class="team-name">Client &amp; Social Media Manager</h3>
+          <img src="gabriela.jpg" alt="Gabriela Hurla" class="team-photo" width="480" height="600" />
+          <h3 class="team-name">Gabriela Hurla | Client &amp; Social Media Manager</h3>
           <p class="team-role">Digital Presence &amp; Content</p>
-          <p class="team-bio">Shapes how your brand shows up online, from social media layouts to content strategy and posting rhythm, with a contemporary eye for clarity, composition, and clear visual identity.</p>
+          <p class="team-bio">Defines how your brand shows up online, from social media layouts to content strategy and posting rhythm, with a contemporary eye for clarity, composition, and clear visual identity.</p>
         </div>
         <div class="team-card reveal reveal-delay-2">
-          <h3 class="team-name">Strategy and Visual Director</h3>
+          <img src="vanessa.jpg" alt="Vanessa Hurla" class="team-photo" width="480" height="600" />
+          <h3 class="team-name">Vanessa Hurla | Strategy and Visual Director</h3>
           <p class="team-role">Image Consultation &amp; Project Direction</p>
-          <p class="team-bio">Keeps projects organised and clearly communicated, translating your needs into structured plans, thoughtful timelines, and reliable delivery, while also overseeing photography and videography direction and production.</p>
+          <p class="team-bio">Shapes the visual identity of each project through thoughtful direction of photography and video, creating content that feels aligned, intentional, and true to the brand.</p>
+          <p class="team-bio">Brings this vision to life with clear planning, organisation, and communication, ensuring a smooth and reliable process throughout.</p>
         </div>
       </div>
     </div>
